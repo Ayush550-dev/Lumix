@@ -1,0 +1,141 @@
+:root {
+    --bg-main: #0b0d10;
+    --bg-secondary: #12161b;
+    --accent-primary: #619BB6;
+    --text-main: #e6e6e6;
+    --text-muted: #9aa0a6;
+    --border-subtle: rgba(255, 255, 255, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Archivo Narrow", sans-serif;
+    background: var(--bg-main);
+    color: var(--text-main);
+    padding-top: 100px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(12px);
+    background: rgba(11, 13, 16, 0.6);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.logo {
+    font-size: 28px;
+    letter-spacing: 5px;
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    margin-left: 25px;
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.hero-wrapper {
+    padding: 20px;
+}
+
+.product-hero {
+    position: relative;
+    height: 85vh;
+
+    border-radius: 30px;
+    overflow: hidden;
+
+    background: url("Lumix G26 core redirect.png") no-repeat right center;
+    background-size: contain;
+    background-color: #0b0d10;
+
+    display: flex;
+    align-items: center;
+    padding: 60px;
+}
+
+.product-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+            rgba(11, 13, 16, 1) 30%,
+            rgba(11, 13, 16, 0.6) 60%,
+            transparent 100%);
+}
+
+.product-content {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+}
+
+.product-content h1 {
+    font-size: 64px;
+    line-height: 1.1;
+}
+
+.product-content p {
+    color: var(--text-muted);
+}
+
+.price {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.emi {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.buy-btn {
+    background: var(--accent-primary);
+    color: black;
+    padding: 12px 30px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+.variants span {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 8px 14px;
+    background: #eee;
+    border-radius: 20px;
+    color: black;
+}
+
+.color {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+    .product-hero {
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        justify-content: center;
+    }
+}
